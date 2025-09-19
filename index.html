@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repoxy - Taller de Pintura Epoxy para Hornos, Llantas y Metales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <div class="logo-container">
+                       <!--<img src="images/logo-repoxy.png" alt="Logo Repoxy" class="logo-image"> -->
+                        <div class="logo-text">
+                            <span class="logo-r">R</span><span class="logo-poxy">poxi</span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Taller de Pintura Electrostática y Epoxi</h1>
+            <p>Especialistas en pintura epoxi y electrostática para metales. Proceso de horneado para máxima durabilidad y resistencia al calor en hornos, llantas y piezas metálicas</p>
+            <div class="hero-buttons">
+                <a href="#servicios" class="btn btn-primary">Nuestros Servicios</a>
+                <a href="#contacto" class="btn btn-secondary">Solicitar Cotización</a>
+            </div>
+        </div>
+         <div class="hero-image">
+             <div class="hero-video-container">
+                 <video class="hero-video" autoplay muted loop playsinline>
+                     <source src="/videos/WhatsApp Video 2025-09-19 at 13.03.17.mp4" type="video/mp4">
+                     <source src="videos/hero-video.webm" type="video/webm">
+                     <!-- Fallback para navegadores que no soportan video -->
+                     <div class="epoxy-demo"></div>
+                 </video>
+                 <div class="video-overlay"></div>
+                 <div class="video-controls">
+                     <button class="video-expand-btn" title="Ver en pantalla completa">
+                         <i class="fas fa-expand"></i>
+                     </button>
+                 </div>
+             </div>
+         </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Pintura de Hornos</h3>
+                    <p>Pintura epoxy y electrostática para hornos industriales. Proceso de horneado para resistencia y durabilidad.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Llantas de Autos</h3>
+                    <p>Pintura electrostática especializada para llantas de autos, motos y vehículos pesados. Acabado horneado de máxima durabilidad.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3>Piezas Metálicas</h3>
+                    <p>Pintura epoxy y electrostática para cualquier pieza metálica.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Autopartes</h3>
+                    <p>Pintura electrostática para piezas de automoviles,motos y vehiculos pesados.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <h3>Proceso de Horneado</h3>
+                    <p>Horneamos la pintura para lograr máxima adherencia, durabilidad y resistencia al calor en todos nuestros trabajos.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Reparación y Mantenimiento</h3>
+                    <p>Servicios de reparación, mantenimiento y restauración de piezas ya pintadas con epoxi y electrostática.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Section -->
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <h2>Nuestros Trabajos</h2>
+
+            <div class="galeria-grid" id="galeriaGrid">
+                <!-- Las primeras 6 imágenes se cargan automáticamente -->
+            </div>
+            
+            <div class="galeria-load-more">
+                <button id="loadMoreBtn" class="btn btn-primary">
+                    <i class="fas fa-plus"></i>
+                    Cargar Más Trabajos
+                </button>
+                <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <span>Cargando...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-media">
+                <img id="lightbox-image" src="" alt="">
+                <video id="lightbox-video" controls>
+                    <source src="" type="video/mp4">
+                </video>
+            </div>
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <div class="lightbox-navigation">
+                    <button id="lightbox-prev" class="lightbox-nav-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <span id="lightbox-counter">1 / 1</span>
+                    <button id="lightbox-next" class="lightbox-nav-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="nosotros">
+        <div class="container">
+            <div class="nosotros-content">
+                <div class="nosotros-text">
+                    <h2>¿Por qué elegirnos?</h2>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-fire"></i>
+                            <div>
+                                <h4>Pintura Electrostática</h4>
+                                <p>Proceso electrostático que garantiza adherencia perfecta y acabado uniforme en metales</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-thermometer-half"></i>
+                            <div>
+                                <h4>Proceso de Horneado</h4>
+                                <p>Horneamos la pintura para lograr máxima durabilidad y resistencia al calor</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Protección Anticorrosión</h4>
+                                <p>Pintura epoxi y electrostática que protege metales de la corrosión y el desgaste</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-tools"></i>
+                            <div>
+                                <h4>Especialización en Metales</h4>
+                                <p>Técnicas especializadas para pintar piezas metálicas complejas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nosotros-stats">
+                    <div class="stat">
+                        <h3>100+</h3>
+                        <p>Trabajos Realizados</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100+</h3>
+                        <p>Piezas Restauradas</p>
+                    </div>
+                    <div class="stat">
+                        <h3>280°C</h3>
+                        <p>Resistencia al Calor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contacto-content">
+                <div class="contacto-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Dr. Miguel A. Carcano 1270<br>Cordoba, Argentina</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+54 (351) 2263388</p>
+                        </div>
+                    </div>
+                   
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horarios</h4>
+                            <p>Lun - Vie: 8:00 - 18:00<br>Sáb: 8:00 - 14:00</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contacto-form" id="cotizacionForm">
+                    <h3>Solicita tu Cotización</h3>
+                    <div class="form-group">
+                        <input type="text" id="nombre" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="telefono" placeholder="Teléfono" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="servicio" required>
+                            <option value="">Tipo de servicio</option>
+                            <option value="horno">Pintura de Horno (Epoxy/Electrostática)</option>
+                            <option value="llantas">Pintura de Llantas (Electrostática)</option>
+                            <option value="metales">Piezas Metálicas (Epoxy/Electrostática)</option>
+                            <option value="industrial">Equipos Industriales (Electrostática)</option>
+                            <option value="horneado">Proceso de Horneado</option>
+                            <option value="reparacion">Reparación/Mantenimiento</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="descripcion" placeholder="Describe tu proyecto (tipo de pieza, dimensiones, color deseado, etc.)" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar por WhatsApp</button>
+                </form>
+            </div>
+            
+            <!-- Mapa de Google Maps -->
+            <div class="mapa-section">
+                <h3>Nuestra Ubicación</h3>
+                <div class="mapa-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.740050476155!2d-64.2314829!3d-31.421287399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432997d81da6ae5%3A0x256c3f9a521d32bb!2sR-poxi%20Pinturas%20Electrost%C3%A1ticas!5e0!3m2!1ses-419!2sar!4v1758298709150!5m2!1ses-419!2sar"
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="mapa-info">
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong>Dr. Miguel A. Carcano 1270 Cordoba, Argentina</p>
+                    <p><i class="fas fa-phone"></i> <strong>Teléfono:</strong>+54 (351) 2263388</p>
+                    <p><i class="fas fa-clock"></i> <strong>Horarios:</strong> Lun - Vie: 8:00 - 18:00 | Sáb: 8:00 - 14:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <div class="logo-container">
+                            
+                            <div class="logo-text">
+                                <span class="logo-r">R</span><span class="logo-poxy">poxi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Especialistas en pintura epoxi y electrostática para metales. Proceso de horneado para máxima durabilidad y resistencia al calor en hornos, llantas y piezas metálicas.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Pintura de Hornos</a></li>
+                        <li><a href="#servicios">Pintura de Llantas</a></li>
+                        <li><a href="#servicios">Pintura Electrostática</a></li>
+                        <li><a href="#servicios">Proceso de Horneado</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i>+54 (351) 2263388</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Dr. Miguel A. Carcano 1270 Cordoba, Argentina</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/r.poxi.33/?igsh=MTJycXV4bHF2dTJrZg%3D%3D#"><i class="fab fa-instagram"></i></a>
+                        <a href="                       wa.link/01vs2u"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Repoxy. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
