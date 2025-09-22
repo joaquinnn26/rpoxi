@@ -430,7 +430,7 @@ class ProgressiveGallery {
             { type: 'image', src: 'images/autoparte1.jpeg', title: 'Autoparte Pintada - Proceso Electrostático', category: 'autopartes', alt: 'Autoparte 1' },
             { type: 'image', src: 'images/autoparte2.jpeg', title: 'Autoparte Pintada - Acabado Profesional', category: 'autopartes', alt: 'Autoparte 2' },
             { type: 'image', src: 'images/autoparte3.jpeg', title: 'Autoparte Pintada - Resistencia al Calor', category: 'autopartes', alt: 'Autoparte 3' },
-            { type: 'image', src: 'images/autoparte4.jpeg', title: 'Autoparte Pintada - Proceso de Horneado', category: 'autopartes', alt: 'Autoparte 4' },
+            
             
             // Llantas
             { type: 'image', src: 'images/llanta.jpeg', title: 'Llanta Pintada - Acabado Duradero', category: 'llantas', alt: 'Llanta' },
@@ -448,7 +448,6 @@ class ProgressiveGallery {
             
             // Trabajos Adicionales
             { type: 'image', src: 'images/WhatsApp Image 2025-09-19 at 12.56.32 (2).jpeg', title: 'Trabajo de Pintura - Proceso Electrostático', category: 'metales', alt: 'Trabajo 1' },
-            { type: 'image', src: 'images/WhatsApp Image 2025-09-19 at 12.56.33.jpeg', title: 'Trabajo de Pintura - Acabado Profesional', category: 'metales', alt: 'Trabajo 2' },
             { type: 'image', src: 'images/WhatsApp Image 2025-09-19 at 12.56.37.jpeg', title: 'Trabajo de Pintura - Resistencia al Calor', category: 'metales', alt: 'Trabajo 3' },
             { type: 'image', src: 'images/WhatsApp Image 2025-09-19 at 12.56.42.jpeg', title: 'Trabajo de Pintura - Proceso de Horneado', category: 'metales', alt: 'Trabajo 4' },
             { type: 'image', src: 'images/WhatsApp Image 2025-09-19 at 12.56.43 (1).jpeg', title: 'Trabajo de Pintura - Acabado Duradero', category: 'metales', alt: 'Trabajo 5' },
