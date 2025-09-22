@@ -1225,6 +1225,17 @@ body {
     box-shadow: 0 5px 15px rgba(220, 38, 38, 0.3);
 }
 
+.social-links a[href*="whatsapp"],
+.social-links a[href*="wa.link"] {
+    background: #25D366;
+}
+
+.social-links a[href*="whatsapp"]:hover,
+.social-links a[href*="wa.link"]:hover {
+    background: #128C7E;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
@@ -1355,6 +1366,40 @@ body {
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #25D366 0%, #20BA5A 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.6);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.whatsapp-button:hover {
+    background: linear-gradient(135deg, #20BA5A 0%, #1A9B4A 100%);
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.8);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.whatsapp-button i {
+    color: white !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Loading animation */

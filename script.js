@@ -330,10 +330,6 @@ function createWhatsAppButton() {
         button.style.boxShadow = '0 8px 25px rgba(37, 211, 102, 0.4), 0 0 0 1px rgba(37, 211, 102, 0.2)';
     });
     
-    // Efecto de pulso
-    setInterval(() => {
-        button.style.animation = 'pulse 2s infinite';
-    }, 5000);
 }
 
 // Crear botón de WhatsApp
